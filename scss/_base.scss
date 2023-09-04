@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@200&family=Nunito+Sans:opsz,wght@6..12,900&display=swap');
+
+$color-sec: #0b770b;
+$color-bottom: #ed1a23;
+$color-bars: #f5b305;
+$font: 'Karla', sans-serif;
+$title-font: 'Nunito Sans', sans-serif;
+$carousel-control-opacity: .5;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: $font;
+    margin-top: 0;
+}

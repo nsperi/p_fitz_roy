@@ -1,0 +1,33 @@
+.topbar{
+    background-color: $color-bars;
+    padding: 10px;
+    .nav{
+        .nav-item{
+            .nav-link{
+                font: $font;
+                text-decoration: none; 
+                color: $color-sec;
+            }
+        }
+    }
+  }
+
+
+.navbar{
+    min-height: 80px;
+    background-color: white;
+    .navbar-brand img {
+        width: 150px;
+        height: auto;
+      }
+    .nav-item {
+        margin: 0 15px;
+        margin-bottom: 7px;
+      }
+}
+.navbar-nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}

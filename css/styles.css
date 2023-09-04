@@ -1,0 +1,254 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@200&family=Nunito+Sans:opsz,wght@6..12,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Karla", sans-serif;
+  margin-top: 0;
+}
+
+.topbar {
+  background-color: #f5b305;
+  padding: 10px;
+}
+.topbar .nav .nav-item .nav-link {
+  font: "Karla", sans-serif;
+  text-decoration: none;
+  color: #0b770b;
+}
+
+.navbar {
+  min-height: 80px;
+  background-color: white;
+}
+.navbar .navbar-brand img {
+  width: 150px;
+  height: auto;
+}
+.navbar .nav-item {
+  margin: 0 15px;
+  margin-bottom: 7px;
+}
+
+.navbar-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.site-footer {
+  background-color: #000;
+  padding: 10px 0 10px;
+  font-size: 15px;
+  line-height: 24px;
+  color: #fff;
+}
+.site-footer hr {
+  border-top-color: #bbb;
+  opacity: 0.5;
+}
+.site-footer hr .small {
+  margin: 20px 0;
+}
+.site-footer h6 {
+  color: #0D6903;
+  font-size: 30px;
+  text-transform: uppercase;
+  margin-top: 5px;
+  letter-spacing: 2px;
+  text-decoration: underline;
+}
+.site-footer a {
+  color: #159d82;
+}
+.site-footer a:hover {
+  color: #0D6903;
+  text-decoration: none;
+}
+
+.footer-links {
+  padding-left: 0;
+  list-style: none;
+}
+.footer-links li {
+  display: block;
+}
+.footer-links a {
+  color: #159d82;
+}
+.footer-links a:active, .footer-links a :focus, .footer-links a :hover {
+  color: #0D6903;
+  text-decoration: none;
+}
+
+.footer-links.inline li {
+  display: inline-block;
+}
+
+.site-footer .social-icons {
+  text-align: right;
+}
+
+.site-footer .social-icons a {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  margin-left: 6px;
+  margin-right: 0;
+  border-radius: 100%;
+  background-color: #0D6903;
+  color: #fff;
+}
+
+.copyright-text {
+  margin: 0;
+}
+
+@media (max-width: 991px) {
+  .site-footer [class^=col-] {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .site-footer {
+    padding-bottom: 0;
+  }
+  .site-footer .copyright-text, .site-footer .social-icons {
+    text-align: center;
+  }
+}
+.social-icons {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.social-icons li {
+  display: inline-block;
+  margin-bottom: 4px;
+}
+
+.social-icons li.title {
+  margin-right: 15px;
+  text-transform: uppercase;
+  color: #96a2b2;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.social-icons a {
+  background-color: #eceeef;
+  color: #818a91;
+  font-size: 16px;
+  display: inline-block;
+  line-height: 44px;
+  width: 44px;
+  height: 44px;
+  text-align: center;
+  margin-right: 8px;
+  border-radius: 100%;
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.social-icons a:active, .social-icons a:focus, .social-icons a:hover {
+  color: #fff;
+  background-color: #29aafe;
+}
+
+.social-icons.size-sm a {
+  line-height: 34px;
+  height: 34px;
+  width: 34px;
+  font-size: 14px;
+}
+
+.social-icons a.facebook:hover {
+  background-color: #3b5998;
+}
+
+.social-icons a.twitter:hover {
+  background-color: #00aced;
+}
+
+@media (max-width: 767px) {
+  .social-icons li.title {
+    display: block;
+    margin-right: 0;
+    font-weight: 600;
+  }
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-1750px);
+  }
+}
+.container {
+  width: 100%;
+  height: auto;
+  padding-left: 0;
+  padding-right: 0;
+  object-fit: contain;
+}
+.container img {
+  width: 100%;
+  height: 600px;
+  display: block;
+  margin: 0 auto;
+  opacity: 0.3;
+}
+.container .title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(64, 64, 64);
+  padding: 10px;
+  text-justify: auto;
+  text-align: center;
+  font-family: "Nunito Sans", sans-serif;
+  transition: color 0.5s ease;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  opacity: 0.9;
+}
+.container .title:hover {
+  color: #000000;
+}
+
+.btn-custom {
+  background-color: #f5b305;
+  color: #0b770b;
+}
+.btn-custom:hover, .btn-custom :focus {
+  background-color: #0b770b;
+  color: white;
+}
+
+.proyecto {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.proyecto h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.proyecto p {
+  font-size: 16px;
+  color: #666;
+}
+
+/*# sourceMappingURL=styles.css.map */
