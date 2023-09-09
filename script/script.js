@@ -1,3 +1,60 @@
+document.addEventListener("DOMContentLoaded", function() {
+    const calculateButton = document.getElementById("calculateButton");
+    const totalBudgetSpan = document.getElementById("totalBudget");
+
+    if (calculateButton && totalBudgetSpan) {
+        calculateButton.addEventListener("click", () => {
+            const materialsCost = parseFloat(document.getElementById("materialsCost").value);
+            const laborCost = parseFloat(document.getElementById("laborCost").value);
+            const otherCosts = parseFloat(document.getElementById("otherCosts").value);
+
+            if (isNaN(materialsCost) || isNaN(laborCost) || isNaN(otherCosts)) {
+                alert("Por favor, ingrese valores numéricos válidos para los costos.");
+            } else {
+                const totalBudget = materialsCost + laborCost + otherCosts;
+                totalBudgetSpan.textContent = totalBudget.toFixed(2);
+            }
+        });
+    }
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const calculateButton = document.getElementById("calculateButton");
+    const totalBudgetSpan = document.getElementById("totalBudget");
+
+    if (calculateButton && totalBudgetSpan) {
+        calculateButton.addEventListener("click", () => {
+            const materialsCost = parseFloat(document.getElementById("materialsCost").value);
+            const laborCost = parseFloat(document.getElementById("laborCost").value);
+            const otherCosts = parseFloat(document.getElementById("otherCosts").value);
+
+            if (isNaN(materialsCost) || isNaN(laborCost) || isNaN(otherCosts)) {
+                alert("Por favor, ingrese valores numéricos válidos para los costos.");
+            } else {
+                const totalBudget = materialsCost + laborCost + otherCosts;
+                totalBudgetSpan.textContent = totalBudget.toFixed(2);
+            }
+        });
+    }
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const formularioContacto = document.getElementById("contact-form");
+
+    formularioContacto.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const message = document.getElementById("message").value;
+
+        alert("Hola " + name + ", tu mensaje ha sido enviado correctamente. Nos contactaremos contigo a la brevedad");
+    });
+});
+
+
 function Proyecto(nombre, descripcion, imagen) {
     this.nombre = nombre;
     this.descripcion = descripcion;
@@ -45,27 +102,5 @@ proyectosTransformados.forEach((proyectoTransformado) => {
 
 
 
-function procesarFormularioContacto() {
-    const message = document.getElementById("message").value;
-    if (message.length > 150) {
-        alert("El mensaje no debe tener más de 150 caracteres.");
-    } else {
-        alert("¡Gracias por tu mensaje! Nos pondremos en contacto contigo pronto.");
-    }
-}
 
-const calculateButton = document.getElementById("calculateButton");
-const totalBudgetSpan = document.getElementById("totalBudget");
 
-calculateButton.addEventListener("click", () => {
-    const materialsCost = parseFloat(document.getElementById("materialsCost").value);
-    const laborCost = parseFloat(document.getElementById("laborCost").value);
-    const otherCosts = parseFloat(document.getElementById("otherCosts").value);
-
-    if (isNaN(materialsCost) || isNaN(laborCost) || isNaN(otherCosts)) {
-        alert("Por favor, ingrese valores numéricos válidos para los costos.");
-    } else {
-        const totalBudget = materialsCost + laborCost + otherCosts;
-        totalBudgetSpan.textContent = totalBudget.toFixed(2);
-    }
-});
