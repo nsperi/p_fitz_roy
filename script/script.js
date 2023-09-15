@@ -55,52 +55,75 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
+
+
+
 function Proyecto(nombre, descripcion, imagen) {
     this.nombre = nombre;
     this.descripcion = descripcion;
     this.imagen = imagen;
 }
 
-const proyecto1 = new Proyecto("Proyecto 1", "En el año 2010 Fitz Roy Construcciones inicia la construcción de viviendas con sistema Royal House llave en mano, tales como la ubicada en Patagonia 271, Caleta Olivia.", "../images/imagen12.jpg");
-const proyecto2 = new Proyecto("Proyecto 2", "En el año 2011, construye oficina para Distrigas S.A. en Jaramillo, localidad al sur de nuestro establecimiento comercial.", "../images/imagen13.jpg");
-const proyecto3 = new Proyecto("Proyecto 3", "En el año 2012, reparación general de las instalaciones eléctricas conforme la normativa vigente del edificio Ledesma de 25 unidades funcionales.", "../images/imagen14.jpg");
-const proyecto4 = new Proyecto("Proyecto 4", "En el año 2014, fabricación de trailers con ejes montantes y lanza de giro, trabajos de soldaduras generales, preparación y montaje de tinglados en la zona industrial de Caleta Olivia.", "../images/imagen15.jpg");
-const proyecto5 = new Proyecto("Proyecto 5", "Año 2017/2019 se construyeron 4 duplex en el barrio Vista Hermosa.", "../images/imagen16.jpg");
 
-const proyectos = [proyecto1, proyecto2, proyecto3, proyecto4, proyecto5];
+function agregarProyecto() {
+    const nombre = document.getElementById("nombre").value;
+    const descripcion = document.getElementById("descripcion").value;
+    const imagen = document.getElementById("imagen").value;
 
-const listaProyectos = document.getElementById("lista-proyectos");
+    if (nombre && descripcion && imagen) {
+        const proyecto = new Proyecto(nombre, descripcion, imagen);
 
-const proyectosTransformados = proyectos.map((proyecto) => {
-    return {
-        nombre: proyecto.nombre,
-        descripcion: proyecto.descripcion,
-        imagen: proyecto.imagen,
-    };
-});
+        const proyectosExistentes = JSON.parse(localStorage.getItem("proyectos")) || [];
 
-proyectosTransformados.forEach((proyectoTransformado) => {
-    const proyectoDiv = document.createElement("div");
-    proyectoDiv.classList.add("proyecto");
+        proyectosExistentes.push(proyecto);
 
-    const nombre = document.createElement("h2");
-    nombre.textContent = proyectoTransformado.nombre;
+        localStorage.setItem("proyectos", JSON.stringify(proyectosExistentes));
 
-    const descripcion = document.createElement("p");
-    descripcion.textContent = proyectoTransformado.descripcion;
+        document.getElementById("nombre").value = "";
+        document.getElementById("descripcion").value = "";
+        document.getElementById("imagen").value = "";
 
-    const imagen = document.createElement("img");
-    imagen.src = proyectoTransformado.imagen;
-    imagen.alt = proyectoTransformado.nombre;
+        mostrarProyectos();
+    } else {
+        alert("Por favor, complete todos los campos.");
+    }
+}
 
-    proyectoDiv.appendChild(nombre);
-    proyectoDiv.appendChild(descripcion);
-    proyectoDiv.appendChild(imagen);
+function mostrarFormulario() {
+    document.querySelector(".form-projects").style.display = "block";
+}
 
-    listaProyectos.appendChild(proyectoDiv);
-});
+function mostrarProyectos() {
+    const listaProyectos = document.querySelector(".listaProyectos");
+    listaProyectos.innerHTML = "";
 
+    const proyectosExistentes = JSON.parse(localStorage.getItem("proyectos")) || [];
 
+    proyectosExistentes.forEach((proyecto, index) => {
+        const tarjetaProyecto = document.createElement("div");
+        tarjetaProyecto.classList.add("tarjeta-proyecto");
 
+        const titulo = document.createElement("h2");
+        titulo.textContent = proyecto.nombre;
+
+        const descripcion = document.createElement("p");
+        descripcion.textContent = proyecto.descripcion;
+
+        const imagen = document.createElement("img");
+        imagen.src = proyecto.imagen;
+        imagen.alt = proyecto.nombre;
+
+        tarjetaProyecto.appendChild(titulo);
+        tarjetaProyecto.appendChild(descripcion);
+        tarjetaProyecto.appendChild(imagen);
+
+        listaProyectos.appendChild(tarjetaProyecto);
+    });
+}
+
+document.getElementById("mostrarFormulario").addEventListener("click", mostrarFormulario);
+document.getElementById("agregarProyecto").addEventListener("click", agregarProyecto);
+
+mostrarProyectos();
 
 

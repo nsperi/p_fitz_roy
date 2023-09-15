@@ -1,18 +1,62 @@
-.proyecto {
-    border: 1px solid #ccc;
+.container-projects {
+    text-align: center;
+    .title-projects {
+        margin-top: 20px;
+        color: black;
+    }
+    button {
+        display: block;
+        margin: 20px auto;
+        padding: 10px 20px;
+        background-color: $color-bars;
+        color: $color-sec;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .form-projects {
+        display: none;
+        background-color: white;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        label {
+            font-weight: bold;
+        }
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        .agregarProyecto {
+            background-color: $color-bars;
+            color: $color-sec;
+            border-radius: 5px;
+        }
+    }
+    .listaProyectos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+}
+
+
+.tarjeta-proyecto {
+    background-color: $color-bars;
     padding: 20px;
-    margin-bottom: 20px;
-    background-color: #f9f9f9;
+    margin: 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 0 0 calc(33.33% - 20px);
 }
 
-.proyecto h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: #333;
-}
-
-.proyecto p {
-    font-size: 16px;
-    color: #666;
+.tarjeta-proyecto img {
+    max-width: 100%;
+    height: auto;
 }

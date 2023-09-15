@@ -232,23 +232,65 @@ html {
   color: white;
 }
 
-.proyecto {
-  border: 1px solid #ccc;
+.container-projects {
+  text-align: center;
+}
+.container-projects .title-projects {
+  margin-top: 20px;
+  color: black;
+}
+.container-projects button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #f5b305;
+  color: #0b770b;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.container-projects .form-projects {
+  display: none;
+  background-color: white;
   padding: 20px;
-  margin-bottom: 20px;
-  background-color: #f9f9f9;
+  border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-
-.proyecto h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
-  color: #333;
+.container-projects .form-projects label {
+  font-weight: bold;
+}
+.container-projects .form-projects input[type=text],
+.container-projects .form-projects textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+.container-projects .form-projects .agregarProyecto {
+  background-color: #f5b305;
+  color: #0b770b;
+  border-radius: 5px;
+}
+.container-projects .listaProyectos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-.proyecto p {
-  font-size: 16px;
-  color: #666;
+.tarjeta-proyecto {
+  background-color: #f5b305;
+  padding: 20px;
+  margin: 10px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex: 0 0 calc(33.33% - 20px);
+}
+
+.tarjeta-proyecto img {
+  max-width: 100%;
+  height: auto;
 }
 
 /*# sourceMappingURL=styles.css.map */
