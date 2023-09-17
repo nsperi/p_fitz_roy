@@ -1,12 +1,18 @@
-document.addEventListener("DOMContentLoaded", function() {
+export function contactForm() {
     const formularioContacto = document.getElementById("contact-form");
 
-    formularioContacto.addEventListener("submit", function(event) {
+    formularioContacto.addEventListener("submit", function (event) {
         event.preventDefault();
 
         const name = document.getElementById("name").value;
         const email = document.getElementById("email").value;
         const message = document.getElementById("message").value;
-        alert("Nombre: " + name + "\nCorreo Electrónico: " + email + "\nMensaje: " + message);
+
+        swal({
+            title: "Hola " + name + "!",
+            text: "Tu mensaje ha sido enviado correctamente. Nos contactaremos contigo a la brevedad",
+            icon: "success",
+            button: "👍"
+        });
     });
-});
+}

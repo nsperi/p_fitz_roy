@@ -9,7 +9,12 @@ document.addEventListener("DOMContentLoaded", function() {
             const otherCosts = parseFloat(document.getElementById("otherCosts").value);
 
             if (isNaN(materialsCost) || isNaN(laborCost) || isNaN(otherCosts)) {
-                alert("Por favor, ingrese valores numéricos válidos para los costos.");
+                swal({
+                    title: "ERROR",
+                    text: "Por favor, ingrese valores numéricos válidos para los costos.",
+                    icon: "error",
+                    button: "Volver a intentar"
+                } );
             } else {
                 const totalBudget = materialsCost + laborCost + otherCosts;
                 totalBudgetSpan.textContent = totalBudget.toFixed(2);
@@ -30,7 +35,12 @@ document.addEventListener("DOMContentLoaded", function() {
             const otherCosts = parseFloat(document.getElementById("otherCosts").value);
 
             if (isNaN(materialsCost) || isNaN(laborCost) || isNaN(otherCosts)) {
-                alert("Por favor, ingrese valores numéricos válidos para los costos.");
+                swal({
+                    title: "ERROR",
+                    text: "Por favor, ingrese valores numéricos válidos para los costos.",
+                    icon: "error",
+                    button: "Volver a intentar"
+                } );
             } else {
                 const totalBudget = materialsCost + laborCost + otherCosts;
                 totalBudgetSpan.textContent = totalBudget.toFixed(2);
@@ -50,7 +60,12 @@ document.addEventListener("DOMContentLoaded", function() {
         const email = document.getElementById("email").value;
         const message = document.getElementById("message").value;
 
-        alert("Hola " + name + ", tu mensaje ha sido enviado correctamente. Nos contactaremos contigo a la brevedad");
+        swal({
+            title: "Hola " + name + "!",
+            text: "Tu mensaje ha sido enviado correctamente. Nos contactaremos contigo a la brevedad",
+            icon: "success",
+            button: "👍"
+        })
     });
 });
 
