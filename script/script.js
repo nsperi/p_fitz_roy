@@ -142,3 +142,43 @@ document.getElementById("agregarProyecto").addEventListener("click", agregarProy
 mostrarProyectos();
 
 
+document.addEventListener("DOMContentLoaded", function() {
+    const jsonFile = './proyectos.json';
+
+    fetch(jsonFile)
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('No se pudo cargar el archivo JSON.');
+        }
+        return response.json();
+    })
+    .then(data => {
+
+        const listaProyectos = document.querySelector(".listaProyectos");
+        listaProyectos.innerHTML = "";
+
+        data.forEach((proyecto, index) => {
+            const tarjetaProyecto = document.createElement("div");
+            tarjetaProyecto.classList.add("tarjeta-proyecto");
+
+            const titulo = document.createElement("h2");
+            titulo.textContent = proyecto.nombre;
+
+            const descripcion = document.createElement("p");
+            descripcion.textContent = proyecto.descripcion;
+
+            const imagen = document.createElement("img");
+            imagen.src = proyecto.imagen;
+            imagen.alt = proyecto.nombre;
+
+            tarjetaProyecto.appendChild(titulo);
+            tarjetaProyecto.appendChild(descripcion);
+            tarjetaProyecto.appendChild(imagen);
+
+            listaProyectos.appendChild(tarjetaProyecto);
+        });
+    })
+    .catch(error => {
+        console.error('Error al cargar el archivo JSON:', error);
+    });
+});

@@ -6,15 +6,15 @@ export function projects() {
     }
 
     function agregarProyecto() {
-        // ... (tu función agregarProyecto aquí)
+
     }
 
     function mostrarFormulario() {
-        // ... (tu función mostrarFormulario aquí)
+
     }
 
     function mostrarProyectos() {
-        // ... (tu función mostrarProyectos aquí)
+
     }
 
     document.getElementById("mostrarFormulario").addEventListener("click", mostrarFormulario);

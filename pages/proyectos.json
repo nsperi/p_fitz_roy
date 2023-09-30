@@ -1,0 +1,23 @@
+[
+    {
+      "nombre": "LOFT AV. COSTANERA",
+      "descripcion": "En el año 2010 Fitz Roy Construcciones inicia la construcción de viviendas con sistema Royal House llave en mano, tales como la ubicada en Patagonia 271, Caleta Olivia. ",
+      "imagen": "../images/imagen12.jpg"
+    },
+    {
+      "nombre": "ZONA INDUSTRIAL",
+      "descripcion": "En el año 2014, fabricación de trailers con ejes montantes y lanza de giro, trabajos de soldaduras generales, preparación y montaje de tinglados en la zona industrial de Caleta Olivia.",
+      "imagen": "../images/imagen15.jpg"
+    },
+    {
+      "nombre": "BARRIO VILLA HERMOSA",
+      "descripcion": "Año 2017/2019 se construyeron 4 duplex en el barrio Vista Hermosa.",
+      "imagen": "../images/imagen16.jpg"
+    },
+    {
+        "nombre": "PROYECTO MITRE",
+        "descripcion": "Hoy nos encontramos trabajando conjuntamente con un grupo multidisciplinario de profesionales, promoviendo una continuidad laboral ininterrumpida, tanto para nuestros proveedores como para nuestra mano de obra en general.",
+        "imagen": "../images/imagen17.jpg"
+      }
+  ]
+  
